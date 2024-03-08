@@ -77,7 +77,7 @@ class M3uParser:
         self._file_regex = re.compile(r"^[a-zA-Z]:\\((?:.*?\\)*).*\.[\d\w]{3,5}$|^(/[^/]*)+/?.[\d\w]{3,5}$")
         self._tvg_name_regex = re.compile(r"tvg-name=\"(.*?)\"", flags=re.IGNORECASE)
         self._tvg_id_regex = re.compile(r"tvg-id=\"(.*?)\"", flags=re.IGNORECASE)
-        self._logo_regex = re.compile(r"tvg-logo=\"(.*?)\"", flags=re.IGNORECASE)
+        self._logo_regex = re.compile(r"logo=\"(.*?)\"", flags=re.IGNORECASE)
         self._chno_regex = re.compile(r"tvg-chno=\"(.*?)\"", flags=re.IGNORECASE)
         self._category_regex = re.compile(r"group-title=\"(.*?)\"", flags=re.IGNORECASE)
         self._title_regex = re.compile(r"(?!.*=\",?.*\")[,](.*?)$", flags=re.IGNORECASE)
