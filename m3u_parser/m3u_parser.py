@@ -104,6 +104,8 @@ class M3uParser:
                         content = content.decode("utf-8")
             except:
                 raise UrlReadException("Cannot read anything from the url.")
+        elif hasattr(path, 'read'):
+            content = path.read()
         else:
             logger.info(f"Started parsing {type} file...")
             try:
